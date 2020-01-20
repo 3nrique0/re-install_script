@@ -6,8 +6,7 @@ sudo apt-get update && sudo apt-get upgrade
 
 ### It will probably be necessary to reboot the computer now
 ### This will install the packages that were heald back
-### source: https://askubuntu.com/questions/601/the-following-packages-have-been-kept-back-why-and-how-d
-o-i-solve-it#602
+### source: https://askubuntu.com/questions/601/the-following-packages-have-been-kept-back-why-and-how-do-i-solve-it#602
 sudo apt-get update && sudo apt-get --with-new-pkgs upgrade
 
 ### Probably another reboot will be necessary
@@ -97,3 +96,9 @@ sudo apt-get install libcurl4-openssl-dev libxml2-dev libssl-dev
 # BiocManager::install('devtools')
 # BiocManager::install('DESeq2')
 # BiocManager::install('edgeR')
+
+
+### INSTALL ALTERNATIVE DESKTOP ENVIRONMENTS
+### This will allow to chose the desktop manager when logging in.
+sudo apt-get install lightdm
+
