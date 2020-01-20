@@ -12,6 +12,7 @@ sudo apt-get update && sudo apt-get --with-new-pkgs upgrade
 ### Probably another reboot will be necessary
 
 
+######################################################################
 
 ## INSTALL BASICS
 
@@ -26,7 +27,6 @@ sudo apt-get install virtualenv
 sudo apt-get install autoconf autotools-dev 
 sudo apt-get install libbz2-1.0  liblzma5  libcurl4-gnutls-dev
 
-
 ### Keeping track of work load and sessions distantly
 sudo apt-get install htop
 sudo apt-get install tmux
@@ -35,12 +35,29 @@ sudo apt-get install tmux
 sudo apt-get install exfat-fuse exfat-utils
 sudo apt-get install gparted
 
+### INSTALL ALTERNATIVE DESKTOP ENVIRONMENTS
+### This will allow to chose the desktop manager when logging in.
+### Reboot is probably necessary
+sudo apt-get install lightdm
 
-### INSTALL TOOLS FOR DATA ANALYSES AND BIOINFORMATICS
+
+######################################################################
+
+## INSTALL TOOLS FOR DATA ANALYSES AND BIOINFORMATICS
 sudo apt-get install fastqc
 sudo apt-get install parallel
 
-### samtools, bcftools, htslib
+### Make a directory to compile software
+### Installs are made system-wide for all users:
+mkdir -p ~/bin
+
+
+### SAMTOOLS, BCFTOOLS, HTSLIB
+### source https://www.htslib.org/download/
+### versions:
+### 	htslib:		1.10.2
+### 	samtools:	1.10
+### 	bcftools:	1.10.2
 # sudo apt-get  install  autoconf  autotools-dev
 # sudo apt-get install libbz2-1.0  liblzma5  libcurl4-gnutls-dev
 cd ~/bin
@@ -68,6 +85,17 @@ make
 sudo make install
 
 cd ~
+
+
+### TRINITY
+### Install instructions from: https://github.com/trinityrnaseq/trinityrnaseq/wiki
+### version: Trinity-v2.9.0 Dec 11, 2019
+
+
+
+
+######################################################################
+
 
 
 ### INSTALL R AND PACKAGES REQUIRED TO INSTALL R LIBRARIES
@@ -98,7 +126,4 @@ sudo apt-get install libcurl4-openssl-dev libxml2-dev libssl-dev
 # BiocManager::install('edgeR')
 
 
-### INSTALL ALTERNATIVE DESKTOP ENVIRONMENTS
-### This will allow to chose the desktop manager when logging in.
-sudo apt-get install lightdm
 
