@@ -90,8 +90,44 @@ cd ~
 ### TRINITY
 ### Install instructions from: https://github.com/trinityrnaseq/trinityrnaseq/wiki
 ### version: Trinity-v2.9.0 Dec 11, 2019
+### requires: bowtie2, salmon, jellyfish
+cd ~/bin
+wget https://github.com/trinityrnaseq/trinityrnaseq/releases/download/v2.9.0/trinityrnaseq-v2.9.0.FULL.tar.gz 
+tar -xzvf trinityrnaseq-v2.9.0.FULL.tar.gz
+cd trinityrnaseq-v2.9.0
+ln -s $PWD/Trinity /usr/local/bin/
 
 
+
+### BOWTIE
+### source: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml
+### https://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.3.5.1/
+### version: bowtie2-2.3.5.1-linux-x86_64.zip
+cd ~/bin
+unzip bowtie2-2.3.5.1-linux-x86_64.zip
+cd bowtie2-2.3.5.1-linux-x86_64
+sudo ln -s /home/geeteam/bin/bowtie2-2.3.5.1-linux-x86_64/bowtie2* /usr/local/bin/
+
+
+### JELLYFISH
+### source: https://github.com/gmarcais/Jellyfish/releases
+### version: Version 2.3.0
+cd ~/bin
+wget https://github.com/gmarcais/Jellyfish/releases/download/v2.3.0/jellyfish-2.3.0.tar.gz 
+tar -xzvf jellyfish-2.3.0.tar.gz
+cd jellyfish-2.3.0
+./configure
+make
+sudo make install
+
+
+### SALMON
+### source: https://github.com/COMBINE-lab/salmon/releases
+cd ~/bin
+wget https://github.com/COMBINE-lab/salmon/releases/download/v1.1.0/salmon-1.1.0_linux_x86_64.tar.gz 
+tar -xzvf salmon-1.1.0_linux_x86_64.tar.gz 
+cd salmon-latest_linux_x86_64/
+sudo ln -s $PWD/bin/salmon /usr/local/bin/
 
 
 ######################################################################
