@@ -130,6 +130,17 @@ cd salmon-latest_linux_x86_64/
 sudo ln -s $PWD/bin/salmon /usr/local/bin/
 
 
+### BLAST+ NCBI
+### source: ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.10.0+-x64-linux.tar.gz
+### version: 2.10.0
+cd ~/bin
+wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.10.0+-x64-linux.tar.gz
+tar -xzvf ncbi-blast-2.10.0+-x64-linux.tar.gz 
+cd ncbi-blast-2.10.0+
+sudo ln -s /home/geeteam/bin/ncbi-blast-2.10.0+/bin/*  /usr/local/bin/
+
+
+
 ######################################################################
 
 
