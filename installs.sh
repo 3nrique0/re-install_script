@@ -78,8 +78,8 @@ sudo make install
 
 cd ~/bin
 wget https://github.com/samtools/samtools/releases/download/1.10/samtools-1.10.tar.bz2
-tar -xvf bcftools-1.10.2.tar.bz2
-cd ~/bin/bcftools-1.10.2/
+tar -xvf samtools-1.10.tar.bz2
+cd ~/bin/samtools-1.10/
 ./configure
 make
 sudo make install
