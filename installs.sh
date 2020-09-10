@@ -147,11 +147,11 @@ sudo ln -s /home/geeteam/bin/ncbi-blast-2.10.0+/bin/*  /usr/local/bin/
 
 ### INSTALL R AND PACKAGES REQUIRED TO INSTALL R LIBRARIES
 
-### R 3.6.x installation
+### R 4.0.x installation
 ### source: https://cran.r-project.org/
 ### To make work the gpg key from CEFE it requires to be specified a port
-sudo echo -e '\ndeb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/' >> /etc/apt/sources.list
-sudo echo '# deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/' >> /etc/apt/sources.list file
+sudo echo -e '\ndeb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/' >> /etc/apt/sources.list
+sudo echo '# deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/' >> /etc/apt/sources.list file
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo apt-get update
 sudo apt-get install r-base
