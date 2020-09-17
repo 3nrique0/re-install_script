@@ -52,6 +52,15 @@ adm, cdrom, lpadmin, sudo, sambashare, dip, plugdev
 For more details:
 https://askubuntu.com/questions/219083/default-groups-for-user-in-ubuntu
 
+#### Change main group for a user:
+
+To change the main group and keep the secondary groups use the `-G` parameter
+with the list of secondary groups. Here's an example of the groups
+
+```bash
+sudo usermod -g PrimaryGroup -G user,sudo,adm,sambashare,lpadmin user
+```
+
 
 #### Default
 
@@ -64,4 +73,50 @@ It will remove the mail spool as well as its home directory.
 ```bash
 userdel -r
 ```
+
+
+## Adding disks
+
+To add a **new** disk it needs to be:
+
+* Find the device : https://linuxhandbook.com/linux-list-disks/
+* Create a partition table (Go with GPT, its newer and manages volumes larger than 2Tb)
+* Format it: https://linuxhandbook.com/mkfs-command/
+* Mount it
+* Manage permissions and add project directories
+* (Optionnal) Add it ti /etc/fstab if you want the disk to be mounted at start-up: https://askubuntu.com/questions/303497/adding-an-entry-to-fstab
+
+
+How to chose a format ?
+
+Will this drive go with Windows and Linux → NTFS (ou exFAT for usb devices).
+No contact with windows → ext4
+
+NTFS and ext4 are both journaled partition systems.
+
+### Same with the code
+
+```bash
+## Find the volumes
+sudo fdisk -l
+## These are other options: df, lsblk, blkid, cfdisk, parted, sfdisk
+
+## Create a partition table, follow the guide, in the help or the link in the previous paragraph
+## example given with /dev/sdb.
+## Use 'g' for GPT,
+## 'n' for a new partition (keep defaults for 1 only partition)
+## 'p' to print choices
+## 'w' to write the choices
+## 'm' to get the menu of all commands within fdisk.
+fdisk /dev/sdb
+
+## Format it to ext4
+sudo mkfs.ext4 -F /dev/sdb1
+
+## Mount it on a directory
+sudo mkdir -p /mnt/volume_name
+sudo mount /dev/sdb1  /mnt/volume_name/
+
+```
+
 
