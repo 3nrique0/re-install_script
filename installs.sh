@@ -17,12 +17,12 @@ sudo apt-get update && sudo apt-get --with-new-pkgs upgrade
 ## INSTALL BASICS
 
 ### Internet and connectivity
-sudo apt-get openssh-server
+sudo apt-get install openssh-server
 sudo apt-get install firefox
 
 ### Programming, Compiling
 sudo apt-get install build-essential
-sudo apt-get geany
+sudo apt-get install geany
 sudo apt-get install virtualenv
 sudo apt-get install autoconf autotools-dev 
 sudo apt-get install libbz2-1.0  liblzma5  libcurl4-gnutls-dev
