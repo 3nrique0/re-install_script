@@ -156,8 +156,11 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A82
 sudo apt-get update
 sudo apt-get install r-base
 
-### Packages required to compile R libraries
+### Packages required to compile DESeq2 (Maybe some are already installed)
 sudo apt-get install libcurl4-openssl-dev libxml2-dev libssl-dev
+
+### PAckages required to compile DADA2 (maybe some are already installed)
+sudo apt-get install libcurl4-gnutls-dev libbz2-dev liblzma-dev libz-dev libpng16-16 libpng-dev  libjpeg-dev
 
 
 ### Installing BioConductor && Packages from BioConductor
