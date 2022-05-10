@@ -125,8 +125,15 @@ Installing R goes pretty smoothly using the instructions from the CRAN.
 Some networks at work would block you from downloading the latest version of R-core.
 You have to add a port and some extra letters to the command, it is listed in `installs.sh`.
 
+To be tested:
+*Else you can install R via conda. This allows to install a different set of R environments.
+This may also help avoid the conflict of updating R-core packages while using BioConductor.*
+
+
+
 If you want R to quit smoothly without asking to save the RData and session,
 you can follow the instructions on this link:
  https://stackoverflow.com/questions/4996090/how-to-disable-save-workspace-image-prompt-in-r/4996252#4996252
 Else you can get the `.Rprofile` file in this same repository.
+
 
