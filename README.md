@@ -136,4 +136,29 @@ you can follow the instructions on this link:
  https://stackoverflow.com/questions/4996090/how-to-disable-save-workspace-image-prompt-in-r/4996252#4996252
 Else you can get the `.Rprofile` file in this same repository.
 
+## Installing conda
+
+Maybe in the future moving to pixi will be a good idea.
+As of today, pixi has not integrated snakemake.
+
+Prefere lighter installers (most to least advised):
+miniforge < miniconda < anaconda
+
+Check the configuration of the channels:
+
+```bash
+conda list
+conda list export --explicit > environment.yml
+```
+
+Remove the default channels and the anaconda channels that might not be open/free anymore.
+Set the most convenient channels
+
+```bash
+conda config --remove channels defaults
+conda config --remove channels anaconda
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+```
 
